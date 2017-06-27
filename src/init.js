@@ -3,7 +3,7 @@ var utils = require('./utils');
 var dc = require('./collection');
 
 module.exports = {
-  SRC_URL: 'https://cookie.pingxx.com',
+  SRC_URL: '//cookie.pingxx.com',
 
   init: function() {
     var self = this;
@@ -35,7 +35,7 @@ module.exports = {
         iframe = document.createElement('<iframe name="ifr"></iframe>');
       }
       iframe.id = 'p_analyse_iframe';
-      iframe.src = this.SRC_URL + '/?puid=' + puid;
+      iframe.src = window.location.protocol + this.SRC_URL + '/?puid=' + puid;
       iframe.style.display = 'none';
       document.body.appendChild(iframe);
     }
